@@ -1,0 +1,23 @@
+footer {
+    background-color: var(--background-light);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  .socmed__icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .socmed__icon img {
+    width: 20px;
+    height: 20px;
+  }
+  

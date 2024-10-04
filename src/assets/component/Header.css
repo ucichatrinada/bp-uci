@@ -1,0 +1,41 @@
+header {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahan efek shadow */
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 100; /* Agar selalu di atas elemen lain */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--special-text); /* Warna teks dari variabel */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Animasi hover */
+}
+
+.nav-links li a:hover {
+    color: #EB395F; /* Warna saat hover */
+}
+
+.logo {
+    width: 250px; /* Ukuran logo */
+}
+
+.logo img {
+    width: 100%; /* Mengatur lebar gambar agar mengisi elemen logo */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+}

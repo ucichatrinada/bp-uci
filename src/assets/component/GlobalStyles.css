@@ -1,0 +1,11 @@
+#toggle__mode {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+#special-text {
+    color: var(--special-text);
+    font-weight: 800;
+}

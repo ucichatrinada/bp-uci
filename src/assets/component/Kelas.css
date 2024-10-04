@@ -1,0 +1,59 @@
+.detail-link {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: inherit; /* Menggunakan warna yang diwariskan (default teks) */
+  }
+  
+  .detail-link:hover {
+    color: palevioletred; /* Mengubah warna teks saat dihover (opsional) */
+  }
+.training-header {
+    font-size: 2rem;
+    text-align: center;  /* Menjadikan teks di tengah secara horizontal */
+    margin: 20px 0;      /* Memberikan jarak vertikal di atas dan bawah */
+    color: #333;
+    position: relative;   /* Memastikan teks tetap dalam flow dokumen */
+  }
+  
+  .training-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Agar konten di dalamnya (termasuk teks) berada di tengah */
+    padding-top: 30px;    /* Memberikan ruang di bagian atas halaman */
+  }
+  
+  .training-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .training-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .training-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .training-info {
+    margin-top: 10px;
+  }
+  
+  .training-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .instructor-info p {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
