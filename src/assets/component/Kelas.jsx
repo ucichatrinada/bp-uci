@@ -13,6 +13,7 @@ const TrainingPage = () => {
         time: "10:00 AM",
         instructor: "Elsa Carroll",
         imageUrl: "/assets-img/pelatihan-4.jpg",
+        
       },
       {
         id: 2,
