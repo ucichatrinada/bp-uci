@@ -1,41 +1,57 @@
 header {
-    width: 100%;
-    background-color: #f8f9fa;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahan efek shadow */
-    position: sticky; /* Sticky header */
-    top: 0;
-    z-index: 100; /* Agar selalu di atas elemen lain */
-}
-
-nav {
+    background-color: #f8f9fa; /* Warna latar belakang header */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  }
+  
+  nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
+    justify-content: space-between; /* Agar elemen logo di kiri dan navbar di kanan */
+    align-items: center; /* Vertikal sejajar tengah */
+  }
+  
+  .logo img {
+    max-height: 50px; /* Atur tinggi maksimum logo */
+  }
+  
+  .nav-links {
     list-style: none;
+    display: flex; /* Agar item menu dalam satu baris */
+    gap: 20px; /* Jarak antar item menu */
+  }
+  
+  .nav-links li {
     display: flex;
-    gap: 40px;
-}
-
-.nav-links li a {
+    align-items: center; /* Sejajarkan teks di tengah vertikal */
+  }
+  
+  .nav-links a, .nav-links button {
     text-decoration: none;
-    color: var(--special-text); /* Warna teks dari variabel */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Animasi hover */
-}
-
-.nav-links li a:hover {
-    color: #EB395F; /* Warna saat hover */
-}
-
-.logo {
-    width: 250px; /* Ukuran logo */
-}
-
-.logo img {
-    width: 100%; /* Mengatur lebar gambar agar mengisi elemen logo */
-    height: auto; /* Mempertahankan rasio aspek gambar */
-}
+    color: #333; /* Warna teks menu */
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+    border: none;
+    background: none;
+  }
+  
+  .nav-links a:hover, .nav-links button:hover {
+    background-color: #e2e6ea; /* Warna saat hover */
+    border-radius: 5px; /* Sedikit sudut melengkung */
+  }
+  
+  .logout-button {
+    cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+    background-color: #ff5c5c; /* Warna tombol logout */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #e04a4a; /* Warna saat hover untuk tombol logout */
+  }
+  
