@@ -14,6 +14,7 @@ import Payment2 from './assets/component/Payment2';
 import Payment3 from './assets/component/Payment3';
 import Portofolio from './assets/component/Portofolio';
 import GalleryCariMUA from './assets/component/GalleryCariMUA';
+import Registrasi from './assets/component/Registrasi';
 
 const App = () => {
   // Fungsi untuk menangani login
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/portofolio" element={<Portofolio />} />
             <Route path="/gallery-cari-mua" element={<GalleryCariMUA />} /> 
             <Route path="/gallery" element={<GalleryCariMUA />}/>
+            <Route path="/registrasi" element={<Registrasi/>}/>
             {/* Route untuk halaman detail training */}
             <Route path="/training/:id" element={<TrainingDetailPage />} />
             <Route path="/payment/:id" element={<Payment1 />} />
