@@ -1,0 +1,186 @@
+/* General Main Styling */
+.main {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(145deg, #f0c1d1, #e08ba3); /* Warna gradient yang elegan dan mengkilap */
+  padding: 4rem 0;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
+  /* Efek 3D dengan bayangan */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 
+              -10px -10px 20px rgba(255, 255, 255, 0.5);
+  border-radius: 20px; /* Tambah border-radius untuk membuatnya tampak lebih lembut */
+}
+
+/* Tambahkan efek hover agar terlihat lebih interaktif */
+.main:hover {
+  background: linear-gradient(145deg, #e8b2c3, #d07a95); /* Perubahan warna saat hover */
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3), 
+              -15px -15px 25px rgba(255, 255, 255, 0.4); /* Tingkatkan bayangan untuk efek lebih dramatis */
+  transition: all 0.3s ease; /* Transisi halus untuk efek hover */
+}
+
+
+/* Section Styling */
+.section {
+  padding: 2rem 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Home Data - Text and Search */
+.home__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.home__description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Search Form */
+.search-container {
+  position: relative; /* Relative to contain clear icon */
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Berikan ruang untuk ikon silang */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.clear-search {
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Tempatkan di kanan dalam input */
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+.clear-search:hover {
+  color: #555; /* Ubah warna saat hover */
+}
+
+.home__search-input::placeholder {
+  color: #999;
+}
+
+/* Value Section */
+.home__value {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.home__value-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ff0066;
+}
+
+.home__value-description {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* Image Section */
+.home__images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__orbe {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 102, 0.3);
+  filter: blur(100px);
+  z-index: 1;
+}
+
+.home__img img {
+  width: 400px;
+  height: auto;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+      grid-template-columns: 1fr;
+  }
+
+  .home__title {
+      font-size: 2.5rem;
+  }
+
+  .home__value {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  .home__img img {
+      width: 300px;
+  }
+}
+
+/* Search Results */
+.search-results {
+  position: absolute;
+  background-color: white; /* Berikan background yang berbeda */
+  border: 1px solid #ddd;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan shadow untuk efek kotak */
+}
+
+.search-result-item {
+  padding: 10px;
+  cursor: pointer; /* Kursor tangan */
+  border-bottom: 1px solid #ddd;
+  background-color: white; /* Background putih */
+  transition: background-color 0.3s ease; /* Animasi transisi warna saat hover */
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0; /* Ubah warna saat di-hover */
+}
+

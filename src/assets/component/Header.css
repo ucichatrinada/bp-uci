@@ -1,17 +1,19 @@
 header {
     background-color: #f8f9fa; /* Warna latar belakang header */
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-  }
-  
-  nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    position: sticky;
+    top: 0; /* Agar menempel di bagian atas */
+    z-index: 1000; /* Supaya di atas elemen lainnya */
+}
+
+nav {
     display: flex;
     justify-content: space-between; /* Agar elemen logo di kiri dan navbar di kanan */
     align-items: center; /* Vertikal sejajar tengah */
-  }
-  
+}
   .logo img {
-    max-height: 50px; /* Atur tinggi maksimum logo */
+    max-height: 100px; /* Atur tinggi maksimum logo */
   }
   
   .nav-links {
