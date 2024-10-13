@@ -6,7 +6,12 @@ import './GalleryCariMUA.css';
 const GalleryCariMUA = () => {
   const location = useLocation();
   const [muaData, setMuaData] = useState([]);
-   // Fungsi untuk menangani klik tombol "Upload Portomu Disini!"
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [locationFilter, setLocationFilter] = useState('');
+  const [specializationFilter, setSpecializationFilter] = useState('');
+
+  // Fungsi untuk menangani klik tombol "Upload Portomu Disini!"
   const navigate = useNavigate();
   const handleUploadClick = () => {
     navigate('/portofolio');  // Ini akan membawa ke halaman Portofolio
@@ -52,9 +57,6 @@ const GalleryCariMUA = () => {
     },
   ];
 
- 
-
-
   useEffect(() => {
     // Coba ambil data dari location.state atau localStorage
     let data = location.state;
@@ -82,6 +84,38 @@ const GalleryCariMUA = () => {
     }
   }, [location.state]);
 
+  // Function to handle filtering
+  useEffect(() => {
+    const filterData = () => {
+      let filtered = muaData;
+
+      // Filter by search term (name)
+      if (searchTerm) {
+        filtered = filtered.filter((mua) =>
+          mua.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+
+      // Filter by location
+      if (locationFilter) {
+        filtered = filtered.filter((mua) =>
+          mua.location.toLowerCase() === locationFilter.toLowerCase()
+        );
+      }
+
+      // Filter by specialization
+      if (specializationFilter) {
+        filtered = filtered.filter((mua) =>
+          mua.specialization.toLowerCase() === specializationFilter.toLowerCase()
+        );
+      }
+
+      setFilteredData(filtered);
+    };
+
+    filterData();
+  }, [searchTerm, locationFilter, specializationFilter, muaData]);
+
   return (
     <div className="gallery-container">
       <h1 className="gallery-header">Galeri Cari MUA</h1>
@@ -92,8 +126,44 @@ const GalleryCariMUA = () => {
       {/* Tombol untuk Upload Portofolio */}
       <button onClick={handleUploadClick} className="upload-btn">Upload Portomu Disini!</button>
 
+      {/* Filter Section */}
+      <div className="filter-container">
+        <input
+          type="text"
+          placeholder="Cari berdasarkan nama..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="filter-input"
+        />
+
+        <select
+          value={locationFilter}
+          onChange={(e) => setLocationFilter(e.target.value)}
+          className="filter-select"
+        >
+          <option value="">Semua Lokasi</option>
+          <option value="Jakarta">Jakarta</option>
+          <option value="Bandung">Bandung</option>
+          <option value="Surabaya">Surabaya</option>
+          <option value="Medan">Medan</option>
+        </select>
+
+        <select
+          value={specializationFilter}
+          onChange={(e) => setSpecializationFilter(e.target.value)}
+          className="filter-select"
+        >
+          <option value="">Semua Spesialisasi</option>
+          <option value="Make Up Pernikahan">Make Up Pernikahan</option>
+          <option value="Make Up Flawless">Make Up Flawless</option>
+          <option value="Make Up Wisuda">Make Up Wisuda</option>
+          <option value="Make Up Pesta">Make Up Pesta</option>
+        </select>
+      </div>
+
+      {/* Gallery Grid */}
       <div className="gallery-grid">
-        {muaData.map((mua, index) => (
+        {filteredData.map((mua, index) => (
           <div key={index} className="gallery-item">
             <div className="gallery-details">
               <h3>{mua.name}</h3>
