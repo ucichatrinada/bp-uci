@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Portofolio.css';
 
 const Portofolio = () => {
   const [gallery, setGallery] = useState([]);
@@ -42,7 +43,7 @@ const Portofolio = () => {
         <option value="Make Up Umum">Make Up Umum</option>
       </select>
       <input type="file" multiple onChange={handleUpload} />
-      <button onClick={handleGalleryRedirect}>Lanjut Upload ke Gallery</button>
+      <button className="upload-gallery-btn" onClick={handleGalleryRedirect}>Lanjut Upload ke Gallery</button>
     </div>
   );
 };

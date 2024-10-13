@@ -1,0 +1,17 @@
+/* Upload to Gallery Button */
+.upload-gallery-btn {
+    background-color: #f53e54; /* Pink color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .upload-gallery-btn:hover {
+    background-color: #d03a4b; /* Darker pink on hover */
+  }
+  
